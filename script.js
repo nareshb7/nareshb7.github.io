@@ -30,8 +30,8 @@ const aboutFun =()=>{
     hideFun()
     if (outputEl.style.display=='none'){
         outputEl.style.display='block'
-        let message = `I am a recently completed enginnering graduate who are passionated about 
-        developing web applications with new way of thinking`
+        let message = `I am a recently completed Enginnering Graduate who are passionated about 
+        developing web applications`
         outputEl.innerHTML = `${message}`
     }
 }
