@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Monthly Expenditure Calculator</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            <div>
+                <h1>Monthly Expenditure Calculator <span id="leftDays"></span></h1>
+                
+            </div>
+            <div>
+                <input type="text" placeholder="Enter your name" id="uname" autocomplete="off">
+                <button id="uBtn">Add Person</button>
+                <span id="dateShow"></span>
+                <button id="userListBtn">Users</button>
+            </div><br>
+            <div id="opt-section">
+                <input type="text" id="iname" placeholder="Enter Item Name"><br><br>
+                <input type="text" id="amount" placeholder="Enter Money"><br><br>
+                <button id="clickBtn">Add</button>
+                <button id="clear">Clear</button>
+                <h3 id="nameShow"></h3>
+                <div id="userOutput"></div>
+                <div id="totalOpt"><h2>Total : &#8377<span id="total"></span>/-</h2></div>
+                
+            </div>
+        </div>
+        <div id="userList"></div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

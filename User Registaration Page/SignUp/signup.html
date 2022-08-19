@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SignUp Form</title>
+		<link rel="stylesheet" href="signup.css">
+	</head>
+	<body>
+		<div>
+			<form id="form1">
+				<h2>SIGNUP </h2>
+				<div>
+					<label>Name :</label><br>
+					<input type="text" id="name" placeholder="Enter yout Name" required autocomplete="off">
+				</div>
+				<div>
+					<label>Mobile Number :</label>
+					<input type="text" id="mblNumber" placeholder="Enter Your Mobile Number" autocomplete="off">
+					<div id="mblError"></div>
+				</div>
+				<div>
+					<label>Email :</label><br>
+					<input type="text" id="email" placeholder="Enter your Mail" autocomplete="off">
+					<div id="emailError"></div>
+				</div>
+				<div>
+					<label>Password<span>(Min 8 Characters)<span> :</label><br>
+					<input type="password" id='psd' placeholder="New Password" autocomplete="off">
+				</div>
+				<div>
+					<label>Confirm Password :</label><br>
+					<input type="password" id="conPsd" placeholder="Confirm Password" autocomplete="off">
+					<div id="psdError"></div>
+				</div>
+				<div>
+					<button type="submit" id='submit'>Submit</button>
+					<div>Already have a  account!s<a href="../Login Form/login.html">LogIn here</a></div>
+				</div>
+			</form>
+		</div>
+		
+
+
+
+		<script src="signUp.js"></script>
+	</body>
+</html>

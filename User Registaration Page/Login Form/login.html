@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<htmL>
+	<head>
+		<title>Login Form</title>
+		<link rel="stylesheet" href="login.css">
+	</head>
+	<body>
+		<div>
+			<form id="form1" action="../welcome/welcome.html" method="get">
+				<h1>Login</h1>
+				<div>
+					<label for='email'>Email: </label><br>
+					<input type="text" placeholder="Enter Mail" name='email' id="email" autocomplete="off">
+					<div id="emailError"></div>
+				</div>
+				<div>
+					<label for='password'>Password :</label><br>
+					<input type="text" placeholder="Enter Password" name='password' id="password" required>
+					<div id="psdError"></div>
+				</div>
+				<div>
+					<div id="loginError"></div>
+					<button type="submit" id="submit" > Submit</button>
+					<div>Don't have an Account? <a href="../SignUp/signup.html">Click Here!</a></div>
+					
+				</div>
+			</form>
+		</div>
+
+
+		<script src="login2.js"></script>
+	</body>
+</htmL>

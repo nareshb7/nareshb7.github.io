@@ -1,0 +1,11 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}

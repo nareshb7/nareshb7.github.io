@@ -1,0 +1,41 @@
+body{
+	padding: 0;
+	margin: 0;
+	background-color: #808080;
+}
+form{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	background-color: #909090;
+	width: 350px;
+	border-radius: 10px;
+}
+form div{
+	margin: 10px;
+}
+form input{
+	padding: 10px;
+	outline: none;
+	border: none;
+}
+form label{
+	font-size: 20px;
+	font-weight: 600;
+}
+form label span{
+	font-size: 10px;
+	font-weight: 300;
+}
+form button{
+	padding: 10px;
+	border: none;
+}
+form button:hover{
+	color: #fff;
+	background-color: #909090;
+	cursor: pointer;
+
+}

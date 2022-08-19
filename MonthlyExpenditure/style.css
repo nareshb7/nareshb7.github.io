@@ -1,0 +1,71 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #808080;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+input, button{  
+    
+    border: none;
+    padding: 10px;
+    border-radius: 7px;
+}
+input:focus{
+    outline-color: #909090 
+}
+button{
+    cursor: pointer;
+}
+button:hover{
+    color: #fff;
+    background-color: #909090;
+}
+#dateShow, #leftDays {
+    background-color: #828595;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    font-weight: 600;
+}
+#leftDays {
+    font-size: 16px;
+}
+
+#userListBtn {
+    float: right;
+}
+#opt-section{
+    text-align: center;
+}
+#opt-section li{
+    list-style: none;
+}
+#userOutput li{
+    margin-block: 5px;
+    background-color: #baacac;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+#userOutput li span{
+    font-weight: 500;
+}
+#nameShow{
+    color: #061c6b;
+}
+#totalOpt h2{
+    color : #d5e0d8
+}
+#userList li{
+    margin-block: 10px;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #7896ca;
+    border-radius: 10px;
+    padding: 10px;
+}
