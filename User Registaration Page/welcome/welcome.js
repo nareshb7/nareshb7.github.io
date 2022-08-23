@@ -9,8 +9,8 @@ const timeEl = document.getElementById('time')
 
 window.addEventListener('load', ()=>{
     let params = (new URL(document.location)).searchParams
-    // let mail = params.get("email")
-    let mail= 'naresh@gmail.com'
+    let mail = params.get("email")
+    //let mail ='nareeh914421@gmail.com'
     console.log(mail)
     let user = JSON.parse(localStorage.getItem(mail))
     console.log(user)
