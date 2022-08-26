@@ -35,4 +35,4 @@ function resetScore(){
     localStorage.setItem("score", 0);
     scoreEl.innerHTML= `Score : ${score}`;
 };
-resetScore();
+//resetScore();
