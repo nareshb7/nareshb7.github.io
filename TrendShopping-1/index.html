@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>JavaScript Main Project by Naresh</title>
+</head>
+
+<body>
+  <div>
+    <nav>
+      <ul>
+        <li><img src="./assets/logo.png" alt="Image"></li>
+        <li><span class="bold">Trend Shopping</span></li>
+        <li><a href="#" onclick="toggleFun2()">Products</a></li>
+        <li><a href="#" onclick="checkOutFun()">Billing</a></li>
+        <li><a href="#" onclick="checkOutFun()">CheckOut</a></li>
+        <li  class="f-right"><span>
+          <a href='./LogIn/login.html'><button id='login' class="button">Log In</button></a>
+          <a href='./SignUp/signup.html' ><button id='signup' class="button">Sign Up</button></a>
+          <button id='logOut' class="button" onclick="logOutFunc()">Log Out</button>
+          <button class="button" onclick="myAccountFunc()" id="myAcBtn">My Account </button>
+          <span class="bold" id='uName'></span>
+        </span></li>
+      </ul>
+    </nav>
+    <div id="page1">
+      <div class="searchBar">
+        <div class="sDiv">
+          <span>Search Products</span>
+          <input type="search" id="sIpt" placeholder="Pleasse enter any product name to search" onkeyup='searchFunc()'>
+        </div>
+        <div>
+          <select id="selectSort" onclick="sortFunc(this.value)">
+            <option value='iName' >Sort by Name (A-Z)</option>
+            <option value='price' >Sort By Price</option>
+          </select>
+        </div>
+      </div>
+      <div id='searchError' class="center bold danger"></div>
+      <div class="section-2">
+        <div id="itemsDiv"></div>
+        <div id="cartList">
+          <div>
+            <div class="l1">
+              <span>Your cart Items &nbsp</span>
+              <span class="button emptyBtn" id="emptyCartBtn" onclick="emptyCart()">Empty cart</span>
+              <span class="button totBtn">Total Items <span id="noOfItems"></span></span>
+            </div>
+            <table cellpadding="15" id="table">
+
+            </table>
+            <button class="button" id="chkOutBtn" onclick="checkOutFun()">CheckOut</button>
+            <h4 id="iRes"></h4>
+            <h3>Total : Rs. <span id="totalAmt"> 0 </span></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="page2">
+      <div id="adrsForm">
+        <h2>Billing Information</h2>
+        <!-- action="./bill/bill.html" -->
+        <form class="adrsForm"  method="get"  id='adrsFom' onsubmit="showDetails()"   >
+          <div>
+            <label for="fName">First Name</label><br>
+            <input type="text" name="fName" placeholder="First Name" required>
+          </div>
+          <div>
+            <label for="lName">Last Name</label><br>
+            <input type="text" name="lName" placeholder="Last Name" required>
+          </div>
+          <div>
+            <label for="email">Email</label><br>
+            <input type="text" name="mail" placeholder="Email" required>
+            <span id="mailError" class="danger"></span>
+          </div>
+          <div>
+            <label for="mobile">Mobile</label><br>
+            <input type="number" name="phone" placeholder="Mobile" required>
+            <span id="phoneError" class="danger"></span>
+          </div>
+          <div>
+            <label for="add1">Address 1</label><br>
+            <input type="text" name="adrs1" placeholder="Address 1" required>
+          </div>
+          <div>
+            <label for="add2">Address 2</label><br>
+            <input type="text" name="adrs2" placeholder="Address 2" required>
+          </div>
+          <div>
+            <label for="city">City </label><br>
+            <input type="text" name="city" placeholder="City" required>
+          </div>
+          <div>
+            <label for="state"> State</label><br>
+            <select id="stateDd">
+              <option value="AP">Andhra Pradesh</option>
+              <option value="KA">Karnataka</option>
+              <option value="MH">Maharasthra</option>
+              <option value="TN">Tamilnadu</option>
+              <option value="TS" selected>Telangana</option>
+
+            </select>
+          </div>
+          <div>
+            <label for="zCode"> Zip Code </label><br>
+            <input type="number" name="zCode" placeholder="Zip Code" required>
+            <span id="zCodeError" class="danger"></span>
+          </div>
+          <div>
+            <label for="pMode">Payment Mode</label><br>
+            <select id="pmDd">
+              <option value="Cash">Cash</option>
+              <option value="Card">Card</option>
+              <option value="UPI">UPI</option>
+            </select>
+          </div>
+          <div><button class="button frmBtn" id="pOrder" >Confirm Place order</button></div>
+        </form>
+        <div><button id="shoppingBtn" class="button f-right frmBtn" onclick="toggleFun2()">Continue Shopping</button></div>
+
+
+      </div>
+      <div id="cart">
+        <h3>Your cart :<span class="f-right"> <span id="cItems"> </span> Items </span> </h3>
+        <div id="cartList2">
+          <div>Ashirvad Ghee <span>2 No's x</span><span>180</span><span class="f-right"> 360</span></div>
+          <div>Total (INR) <span class="f-right" id="totalAmount">360</span></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
