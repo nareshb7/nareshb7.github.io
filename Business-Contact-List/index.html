@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contact List</title>
+		<link rel="stylesheet" href="style.css" >
+	</head>
+	<body>
+		<div class="wrapper">
+			<div>
+				<h2>Business Contact List</h2>
+				<button id="addClient">Add</button>
+				<input type="text" name="" placeholder="Search by Mail" id="sIpt">
+				<div id="userError"></div>
+				<div class="uList">
+					<h3>Clients : </h3>
+					<table id="c-list" cellpadding="10" border="1">
+					</table>
+				</div>
+			</div>
+			<div id="form">
+				<form id='form1' >
+					<li><input type="text" name="fName" placeholder="First Name"></li>
+					<span id="fNerror"></span>
+					<li><input type="text" name="lName" placeholder="Last Name"></li>
+					<span id="lNerror"></span>
+					<li><input type="text" name="phone" placeholder="Enter Mobile Number"></li>
+					<span id="phError"></span>
+					<li><input type="text" name="pEmail" placeholder="Primary Email Address"></li>
+					<span id="pemError"></span>
+					<li><input type="text" name="sEmail" placeholder="Secondary Email"></li>
+					<span id="semError"></span>
+					<li><input type="text" name="pName" placeholder="Project Name"></li>
+					<span id="pNerror"></span>
+					<li>Project Status:
+						<select id='pStatus' name='pStatus' >
+							<option>Select</option>
+							<option value='Scratch' selected >Scratch</option>
+							<option value='In Progress'>In Progress</option>
+							<option value="Completed">Completed</option>
+						</select>
+					</li>
+					<li>
+						<button type="submit" id="submitBtn" value="submit">Submit</button>
+						<button id="updateData">Update Data</button>
+					</li>
+					<li><span id="submitError"></span></li>
+				</form>
+			</div>
+
+		</div>
+		
+
+
+
+		<script src="script.js"></script>
+	</body>
+</html>
