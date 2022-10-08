@@ -1,10 +1,12 @@
 body {
     padding: 0;
     margin: 0;
+    font-family: monospace;
 }
 .center {
     width: 30%;
-    margin: auto;
+    margin: 10px auto;
+    border: 1px dashed #888;
 }
 .center >h2 {
     text-align: center;
@@ -30,4 +32,7 @@ body {
     background-color: #ccc;
     color: #7b75cb;
 
+}
+.tableRow th, .tableRow td {
+    border-block: 1px dashed #888;
 }

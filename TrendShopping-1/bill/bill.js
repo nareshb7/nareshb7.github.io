@@ -22,7 +22,7 @@ opt.innerHTML = val
 
 if (iList) {
   printBtn.disabled = false
-  let thead = `<thead><th>Sl. No</th><th>Item Name</th><th>Price</th><th>Quantity</th><th>Amount</th></thead>`
+  let thead = `<thead><tr class='tableRow'><th>Sl. No</th><th>Item Name</th><th>Price</th><th>Quantity</th><th>Amount</th><tr></thead>`
   let tbody = `<tbody>`
   let counter = 1
   for (const x in iList) {
@@ -33,7 +33,7 @@ if (iList) {
             <td>${iList[x]['amount']}</td></tr>`
     }
   }
-  tbody += `<tr ><td colspan=4> Total :</td><th>${iList['totalAmount']}</th></tr></tbody>`
+  tbody += `<tr  class='tableRow'><td colspan=4> Total :</td><th>${iList['totalAmount']}</th></tr></tbody>`
   tableDiv.innerHTML = thead + tbody
 } else {
   tableDiv.innerHTML = ``
