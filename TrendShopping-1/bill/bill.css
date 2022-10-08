@@ -5,7 +5,8 @@ body {
 }
 .center {
     width: 30%;
-    margin: auto;
+    margin: 10px auto;
+    border: 1px dashed #888;
 }
 .center >h2 {
     text-align: center;
