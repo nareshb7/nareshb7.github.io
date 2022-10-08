@@ -81,6 +81,10 @@ body{
     width: 300px;
     height: 300px;
 }
+
+#output a {
+    color: #aaa;
+}
 @media screen and  (max-width :991px){
     .wrapper{
         flex-direction: column;
