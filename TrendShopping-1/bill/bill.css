@@ -33,6 +33,6 @@ body {
     color: #7b75cb;
 
 }
-.tableRow  {
+.tableRow th, .tableRow td {
     border-block: 1px dashed #888;
 }
