@@ -1,8 +1,8 @@
 import { DarkMode, LightMode } from '@mui/icons-material'
 import { IconButton, useTheme } from '@mui/material'
-import { useAuthContext } from 'auth/index';
+import { useAuthContext } from 'auth';
 import React from 'react'
-import { ThemeType } from 'theme/index';
+import { ThemeType } from 'theme';
 
 const Navbar = () => {
   const {setMode, mode} = useAuthContext()
