@@ -8,12 +8,10 @@ import {
   useTheme,
 } from '@mui/material';
 import React, { useState } from 'react';
-import logo from 'assets/nrLogo.png';
 import FlexBetween from 'styles/FlexBetween';
-import StyledImage from 'styles/StyledImage';
 import { ThemeType } from 'theme';
 import { NavList } from './NavList';
-import { NAME } from 'common';
+import { DEVELOPER_NAME } from 'common';
 
 const Navbar = () => {
   const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
@@ -40,20 +38,8 @@ const Navbar = () => {
             },
           }}
         >
-          {NAME}
+          {DEVELOPER_NAME}
         </Typography>
-        {/* <Box
-          sx={{
-            width: '30px',
-            height: '30px',
-            '&:hover': {
-              color: primaryLight,
-              cursor: 'pointer',
-            },
-          }}
-        >
-          <StyledImage src={logo} />
-        </Box> */}
       </FlexBetween>
       {isNonMobileScreens ? (
         <FlexBetween gap="1rem">
