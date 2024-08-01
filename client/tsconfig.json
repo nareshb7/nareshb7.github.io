@@ -23,7 +23,8 @@
       "assets/*": ["assets/*"],
       "auth/*": ["auth/*"],
       "service/*": ["service/*"],
-      "theme/*": ["theme/*"]
+      "theme/*": ["theme/*"],
+      "styles/*": ["style-components/*"]
       // Add more aliases as needed
     },
     },

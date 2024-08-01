@@ -19,6 +19,7 @@ module.exports = {
       auth: path.resolve(__dirname, "src/auth"),
       service: path.resolve(__dirname, "src/service"),
       theme: path.resolve(__dirname, "src/theme"),
+      styles: path.resolve(__dirname, "src/style-components"),
       // Add more aliases as needed
     },
   },
@@ -37,6 +38,18 @@ module.exports = {
             ],
           },
         },
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images', // Optional: Specify the output directory for the images
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
