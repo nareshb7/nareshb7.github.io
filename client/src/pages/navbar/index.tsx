@@ -12,6 +12,8 @@ import FlexBetween from 'styles/FlexBetween';
 import { ThemeType } from 'theme';
 import { NavList } from './NavList';
 import { DEVELOPER_NAME } from 'common';
+import { Pages } from './types';
+import { scrollToSection } from 'utils/util';
 
 const Navbar = () => {
   const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
@@ -21,10 +23,16 @@ const Navbar = () => {
   const background = theme.palette.background.default;
   const primaryLight = theme.palette.primary.light;
   const alt = theme.palette.background.alt;
+  const handleNameClick =()=> {
+    const el = document.getElementById(Pages.INFO)
+    if (el) {
+      scrollToSection(el)
+    }
+  }
   return (
     <FlexBetween
       className="nav-bar"
-      sx={{ padding: '1rem 6%', backgroundColor: alt }}
+      sx={{ padding: '1rem 6%', backgroundColor: alt, position: "sticky",top: 0, width: "100%", zIndex: 999 }}
     >
       <FlexBetween gap="1.75rem">
         <Typography
@@ -37,6 +45,7 @@ const Navbar = () => {
               cursor: 'pointer',
             },
           }}
+          onClick={handleNameClick}
         >
           {DEVELOPER_NAME}
         </Typography>

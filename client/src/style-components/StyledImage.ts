@@ -2,7 +2,7 @@ import { styled } from "@mui/system";
 
 const StyledImage = styled('img')({
     width: '100%',
-    height: 'auto',
+    height: '100%',
     borderRadius: '8px', // Example styling
   });
 

@@ -1,40 +1,24 @@
-import {
-  GitHub,
-  Instagram,
-  LinkedIn,
-  Message,
-  SendAndArchiveOutlined,
-  SendOutlined,
-} from '@mui/icons-material';
-import { Box, Button, Typography } from '@mui/material';
-import { DEVELOPER_NAME, PERSONAL_DETAILS } from 'common';
+import { Box } from '@mui/material';
+import developerImage from 'assets/developer.jpeg';
 import React from 'react';
 import FlexBetween from 'styles/FlexBetween';
 import StyledImage from 'styles/StyledImage';
-import developerImage from 'assets/developer.jpeg';
+import InfoDescription from './InfoDescription';
+import InfoLinks from './InfoLinks';
+import { Pages } from 'pages/navbar/types';
 
-const Info = () => {
+const Info: React.FC = () => {
   return (
-    <FlexBetween>
-      <Box>
-        <FlexBetween flexDirection={"column"} gap="1rem" >
-          <Instagram sx={{fontSize: "2.3rem"}}/>
-          <GitHub sx={{fontSize: "2.3rem"}} />
-          <LinkedIn sx={{fontSize: "2.3rem"}} />
-        </FlexBetween>
-      </Box>
-      <Box sx={{textAlign: "center", fontFamily: "cursive"}}>
-        <Typography variant="h1" sx={{ margin: "5px"}}>{PERSONAL_DETAILS.name}</Typography>
-        <Typography variant="h3" sx={{ margin: "5px"}}>{PERSONAL_DETAILS.role}</Typography>
-        <Typography variant="h5" sx={{ margin: "5px"}}>{PERSONAL_DETAILS.description}</Typography>
-        <Button sx={{ fontSize: '25px',marginTop: "20px" }}>
-          Say Hello &nbsp;
-          <SendOutlined />
-        </Button>
-      </Box>
-      <Box>
-        <Box sx={{ width: '400px', height: '400px' }}>
-          <StyledImage src={developerImage} sx={{borderRadius:"50%"}} />
+    <FlexBetween id={Pages.INFO} height={"100vh"} width={'85%'} margin={'auto'} sx={{
+      '@media (max-width:767px)': {
+          flexDirection:"column"
+        },
+    }}  >
+      <InfoLinks />
+      <InfoDescription />
+      <Box sx={{ marginRight: '10px' }}>
+        <Box sx={{ width: '300px', height: '300px' }}>
+          <StyledImage src={developerImage} sx={{ borderRadius: '50%' }} />
         </Box>
       </Box>
     </FlexBetween>
