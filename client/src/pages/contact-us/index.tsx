@@ -6,6 +6,8 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import SectionHeader from 'common/SectionHeader';
 import { Pages } from 'pages/navbar/types';
+import { FormData } from './types';
+import { sendData } from './api';
 
 const INITIAL_FORM_DATA = {
   name: '',
@@ -16,33 +18,27 @@ const INITIAL_FORM_DATA = {
 const INITIAL_MESSAGE = {
   type: '',
   content: '',
-}
+};
 
 function ContactUs() {
-  const [formData, setFormData] = useState(INITIAL_FORM_DATA);
+  const [formData, setFormData] = useState<FormData>(INITIAL_FORM_DATA);
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState(INITIAL_MESSAGE);
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
-    setMessage(INITIAL_MESSAGE)
+    setMessage(INITIAL_MESSAGE);
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
   const handleSend = () => {
     setIsLoading(true);
-    const url = 'https://mail-verification.onrender.com/send-message';
-    fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
-    })
-      .then((res) => res.json())
+    sendData(formData)
       .then((dt) => {
         setFormData(INITIAL_FORM_DATA);
         setMessage({ type: 'SUCCESS', content: 'Mail sent Successfully' });
       })
-      .catch((err) => {
+      .catch((_) => {
         setMessage({
           type: 'ERROR',
           content: 'Error Occured, while sending  mail please try again...',
@@ -125,16 +121,6 @@ function ContactUs() {
           />
         </Grid>
         <Grid item xs={12}>
-          <Button
-            variant="contained"
-            color="primary"
-            type="submit"
-            onClick={handleSend}
-          >
-            {isLoading ? 'Sending...' : 'Send Message'}
-          </Button>
-        </Grid>
-        <Grid item xs={12}>
           {message.type === 'ERROR' && (
             <Typography
               sx={{
@@ -160,6 +146,17 @@ function ContactUs() {
             </Typography>
           )}
         </Grid>
+        <Grid item xs={12}>
+          <Button
+            variant="contained"
+            color="primary"
+            type="submit"
+            onClick={handleSend}
+          >
+            {isLoading ? 'Sending...' : 'Send Message'}
+          </Button>
+        </Grid>
+       
       </Grid>
 
       <Box sx={{ marginTop: 4, textAlign: 'center' }}>
