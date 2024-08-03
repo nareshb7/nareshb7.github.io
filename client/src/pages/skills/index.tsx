@@ -24,7 +24,7 @@ const Skills: React.FC = () => {
       <SectionHeader name="Skills" />
       <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
         {skillSet.map((skill) => {
-          return <CircularProgressWithLabel value={skill.progress} name={skill.name} />;
+          return <CircularProgressWithLabel key={skill.id} value={skill.progress} name={skill.name} />;
         })}
       </Box>
     </Box>

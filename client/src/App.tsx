@@ -8,6 +8,7 @@ import Info from 'pages/info';
 import Projects from 'pages/projects';
 import Skills from 'pages/skills';
 import About from 'pages/about';
+import ContactUs from 'pages/contact-us';
 
 const App = () => {
   const { mode } = useAuthContext();
@@ -20,6 +21,7 @@ const App = () => {
         <Projects />
         <Skills />
         <About />
+        <ContactUs />
       </Box>
     </ThemeProvider>
   );

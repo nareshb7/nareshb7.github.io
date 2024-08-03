@@ -24,7 +24,6 @@ const CircularProgressWithLabel = ({
       <CircularProgress
         size={150}
         variant="determinate"
-        disableShrink
         value={value}
         sx= {{
           circle: {
