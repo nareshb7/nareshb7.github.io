@@ -39,7 +39,7 @@ export const projectConfig: ProjectData[] = [
     image: reactBeginnerProjects,
     title: 'React Beginner Projects',
     description: 'There is 20 react beginner projects like todo app, weather app and etc.',
-    url: 'https://nareshb7.github.io/react-projects/weather',
+    url: 'https://nareshb7.github.io/react-projects',
   },
   {
     id: 6,

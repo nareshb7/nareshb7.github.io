@@ -5,12 +5,12 @@ import React from 'react';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import developerImage from 'assets/developer.jpeg';
-import { LINKEDIN_URL } from 'common';
+import { LEETCODE_URL, LINKEDIN_URL } from 'common';
 
 const About: React.FC = () => {
   return (
     <Box id={Pages.ABOUT}>
-      <SectionHeader name={"About Me"} />
+      <SectionHeader name={'About Me'} />
       <Box
         sx={{ padding: 4, maxWidth: 800, margin: 'auto', textAlign: 'center' }}
       >
@@ -76,10 +76,14 @@ const About: React.FC = () => {
           component="p"
           sx={{ marginTop: 2, textAlign: 'justify' }}
         >
-          I hold a degree from JNTUH and have completed several
-          certifications in web development. In my free time, I enjoy solving
-          coding challenges on <Link>LeetCode</Link>, participating in technical conferences,
-          and exploring the latest trends in web development.
+          I hold a degree from JNTUH and have completed several certifications
+          in web development. In my free time, I enjoy solving coding challenges
+          on{' '}
+          <Link href={LEETCODE_URL} target="_blank" rel="noopener noreferrer">
+            LeetCode
+          </Link>
+          , participating in technical conferences, and exploring the latest
+          trends in web development.
         </Typography>
         <Typography
           variant="body1"
@@ -87,14 +91,14 @@ const About: React.FC = () => {
           sx={{ marginTop: 2, textAlign: 'justify' }}
         >
           Feel free to reach out to me on{' '}
-          <Link
-            href={LINKEDIN_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
             LinkedIn
+          </Link>{' '}
+          or via email at{' '}
+          <Link href="mailto:nareshbjava7@gmail.com">
+            {' '}
+            nareshbjava7@example.com.
           </Link>
-          or via email at nareshbjava7@example.com.
         </Typography>
       </Box>
     </Box>
