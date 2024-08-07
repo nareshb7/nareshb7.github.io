@@ -36,7 +36,7 @@ function ContactUs() {
     sendData(formData)
       .then((dt) => {
         setFormData(INITIAL_FORM_DATA);
-        setMessage({ type: 'SUCCESS', content: 'Mail sent Successfully' });
+        setMessage({ type: 'SUCCESS', content: 'Mail sent Successfully, You will receive a confirmation mail from My team..!' });
       })
       .catch((_) => {
         setMessage({

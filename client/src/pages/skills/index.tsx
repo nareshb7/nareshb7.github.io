@@ -1,32 +1,44 @@
-import { Box, CircularProgress, Typography } from '@mui/material';
-import SectionHeader from 'common/SectionHeader';
 import React from 'react';
-import CircularProgressWithLabel from './CircularProgressWithLabel';
-
-
-const skillSet = [
-  { id: 1, name: 'Html', progress: 80 },
-  { id: 2, name: 'CSS', progress: 80 },
-  { id: 3, name: 'Java Script', progress: 80 },
-  { id: 4, name: 'Tailwind CSS', progress: 45 },
-  { id: 5, name: 'Sass', progress: 55 },
-  { id: 6, name: 'React', progress: 80 },
-  { id: 7, name: 'BootStrap', progress: 70 },
-  { id: 8, name: 'Node JS', progress: 50 },
-  { id: 9, name: 'Express JS', progress: 50 },
-  { id: 10, name: 'AWS', progress: 20 },
-  { id: 11, name: 'Mongo DB', progress: 40 },
-];
+import { Box, Typography, LinearProgress } from '@mui/material';
+import { SkillSet } from './type';
+import { Pages } from 'pages/navbar/types';
+import { skillSet } from './config';
 
 const Skills: React.FC = () => {
   return (
-    <Box id="skills">
-      <SectionHeader name="Skills" />
-      <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
-        {skillSet.map((skill) => {
-          return <CircularProgressWithLabel key={skill.id} value={skill.progress} name={skill.name} />;
-        })}
-      </Box>
+    <Box
+      id={Pages.SKILLS}
+      sx={{
+        p: 3,
+        bgcolor: 'background.default',
+        color: 'text.primary',
+        width: '50%',
+        marginLeft: "5%",
+        '@media (max-width:767px)': {
+          width: '100%',
+          marginLeft: 0
+        },
+      }}
+    >
+      <Typography variant="h4" gutterBottom>
+        My Skills
+      </Typography>
+      
+      {Object.keys(skillSet).map((category) => (
+        <Box key={category} sx={{ mb: 4 }}>
+          <Typography variant="h4" gutterBottom>
+            {category.charAt(0).toUpperCase() + category.slice(1)}:
+          </Typography>
+          {skillSet[category as keyof SkillSet].map((skill) => (
+            <Box key={skill.id} sx={{ mb: 2 }}>
+              <Typography variant="h6" gutterBottom>
+                {skill.name}
+              </Typography>
+              <LinearProgress variant="determinate" value={skill.progress} aria-label={skill.name}/>
+            </Box>
+          ))}
+        </Box>
+      ))}
     </Box>
   );
 };

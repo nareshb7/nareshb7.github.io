@@ -1,6 +1,7 @@
 import { DarkMode, LightMode } from '@mui/icons-material';
 import {
   IconButton,
+  List,
   ListItem
 } from '@mui/material';
 import { useAuthContext } from 'auth/index';
@@ -27,6 +28,7 @@ export const NavList: React.FC<NavListProps> = ({ dark }) => {
   };
   return (
     <>
+    <List sx={{display:"flex"}}>
       {navList.map((section) => (
         <ListItem
           sx={{ cursor: 'pointer' }}
@@ -35,7 +37,8 @@ export const NavList: React.FC<NavListProps> = ({ dark }) => {
           {section.label}
         </ListItem>
       ))}
-      <IconButton onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}>
+      </List>
+      <IconButton onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')} aria-label='dark-light-button'>
         {mode === 'dark' ? (
           <DarkMode sx={{ fontSize: '25px' }} />
         ) : (

@@ -52,30 +52,6 @@ const About: React.FC = () => {
           component="p"
           sx={{ marginTop: 2, textAlign: 'justify' }}
         >
-          My technical skillset includes:
-        </Typography>
-        <Box sx={{ textAlign: 'left', marginLeft: 2 }}>
-          <Typography variant="body2" component="p">
-            • JavaScript, HTML, CSS
-          </Typography>
-          <Typography variant="body2" component="p">
-            • React, Node.js, Express.js
-          </Typography>
-          <Typography variant="body2" component="p">
-            • Ant Design, Material UI, Bootstrap, Tailwind CSS, Sass
-          </Typography>
-          <Typography variant="body2" component="p">
-            • MongoDB
-          </Typography>
-          <Typography variant="body2" component="p">
-            • Git, Docker
-          </Typography>
-        </Box>
-        <Typography
-          variant="body1"
-          component="p"
-          sx={{ marginTop: 2, textAlign: 'justify' }}
-        >
           I hold a degree from JNTUH and have completed several certifications
           in web development. In my free time, I enjoy solving coding challenges
           on{' '}

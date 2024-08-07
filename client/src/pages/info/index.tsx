@@ -18,7 +18,7 @@ const Info: React.FC = () => {
       <InfoDescription />
       <Box sx={{ marginRight: '10px' }}>
         <Box sx={{ width: '300px', height: '300px' }}>
-          <StyledImage src={developerImage} sx={{ borderRadius: '50%' }} />
+          <StyledImage src={developerImage} sx={{ borderRadius: '50%' }} alt="developer-image" />
         </Box>
       </Box>
     </FlexBetween>

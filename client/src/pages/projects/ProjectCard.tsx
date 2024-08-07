@@ -20,14 +20,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const theme = useTheme();
   return (
     <Card
-      style={{
+      sx={{
         width: 345,
         height: 300,
         margin: '20px',
         backgroundColor: theme.palette.background.paper,
         boxShadow: theme.shadows[5],
         transition: 'all 0.3s',
-        display: "inline-block"
+        display: 'inline-block',
+        '@media (max-width:767px)': {
+          width: 300,
+          margin: "5px"
+        },
       }}
     >
       <CardMedia component="img" height="140" image={image} alt={title} />
@@ -40,9 +44,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </Typography>
       </CardContent>
       <CardActions style={{ alignSelf: 'end' }}>
-        <Button size="small" color="primary" href={url} target="_blank">
-          <Typography variant="inherit"> Click here</Typography>
-        </Button>
+        <Typography>
+          Click here for{' '}
+          <Link href={url} target="_blank" rel="noopener noreferrer">
+            {title}
+          </Link>
+        </Typography>
+        {/* <Button size="small" color="primary" href={url} target="_blank">
+          <Typography variant="inherit">{title} </Typography>
+        </Button> */}
       </CardActions>
     </Card>
   );
