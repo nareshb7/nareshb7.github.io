@@ -8,6 +8,7 @@ import SectionHeader from 'common/SectionHeader';
 import { Pages } from 'pages/navbar/types';
 import { FormData } from './types';
 import { sendData } from './api';
+import { Link } from '@mui/material';
 
 const INITIAL_FORM_DATA = {
   name: '',
@@ -162,7 +163,7 @@ function ContactUs() {
       <Box sx={{ marginTop: 4, textAlign: 'center' }}>
         <Typography variant="body1">
           Alternatively, you can email us directly at:{' '}
-          <a href="mailto:nareshbjava7@gmail.com">nareshbjava7@gmail.com</a>
+          <Link href="mailto:nareshbjava7@gmail.com">nareshbjava7@gmail.com</Link>
         </Typography>
       </Box>
     </Box>

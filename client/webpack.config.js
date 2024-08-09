@@ -1,5 +1,6 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.tsx",
@@ -64,7 +65,13 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
-    })
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "public/sitemap.xml", to: "sitemap.xml" }, // Copy sitemap.xml to the dist folder
+        // Add other files or directories to copy if needed
+      ],
+    }),
   ],
   devServer: {
     port: 4040,
