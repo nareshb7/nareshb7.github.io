@@ -4,7 +4,7 @@ import { Pages } from 'pages/navbar/types';
 import React from 'react';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
-import developerImage from 'assets/developer.jpeg';
+import developerImage from 'assets/developer.webp';
 import { LEETCODE_URL, LINKEDIN_URL } from 'common';
 
 const About: React.FC = () => {

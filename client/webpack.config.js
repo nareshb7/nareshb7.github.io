@@ -41,7 +41,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpe?g|gif|jpg)$/i,
+        test: /\.(jpg|jpeg|png|gif|webp)$/,
         use: [
           {
             loader: 'file-loader',
@@ -50,6 +50,28 @@ module.exports = {
               outputPath: 'images', // Optional: Specify the output directory for the images
             },
           },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 65,
+              },
+              optipng: {
+                enabled: false,
+              },
+              pngquant: {
+                quality: [0.65, 0.90],
+                speed: 4,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              webp: {
+                quality: 75,
+              },
+            },
+          }
         ],
       },
       {
@@ -80,5 +102,8 @@ module.exports = {
     hot: true,
     compress: true,
     historyApiFallback: true,
+  },
+  optimization: {
+    usedExports: true,
   },
 };

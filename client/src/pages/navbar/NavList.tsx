@@ -33,6 +33,7 @@ export const NavList: React.FC<NavListProps> = ({ dark , isToggle}) => {
         <ListItem
           sx={{ cursor: 'pointer' }}
           onClick={() => handleLinkClick(section.url)}
+          key={section.id}
         >
           {section.label}
         </ListItem>

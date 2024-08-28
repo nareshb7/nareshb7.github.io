@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import developerImage from 'assets/developer.jpeg';
+import developerImage from 'assets/developer.webp';
 import React from 'react';
 import FlexBetween from 'styles/FlexBetween';
 import StyledImage from 'styles/StyledImage';
