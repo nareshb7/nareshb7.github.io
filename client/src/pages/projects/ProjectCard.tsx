@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Card,
   CardMedia,
@@ -17,7 +17,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   url,
 }) => {
+  const [imgSrc, setImgSrc] = useState('')
   const theme = useTheme();
+  useEffect(()=> {
+    image().then(img => setImgSrc(img.default))
+  }, [])
   return (
     <Card
       sx={{
@@ -34,7 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         },
       }}
     >
-      <CardMedia component="img" height="140" image={image} alt={title} />
+      <CardMedia component="img" height="140" image={imgSrc} alt={title} />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {title}

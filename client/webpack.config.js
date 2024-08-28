@@ -65,7 +65,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
-      favicon: './public/nrLogo.png'
+      favicon: './public/favicon.png'
     }),
     new CopyWebpackPlugin({
       patterns: [

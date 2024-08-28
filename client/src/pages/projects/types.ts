@@ -1,12 +1,12 @@
 export interface ProjectCardProps {
-  image: string;
+  image: () => Promise<any>;
   title: string;
   description: string;
   url: string;
 }
 export interface ProjectData {
     id: number;
-    image: string;
+    image: () => Promise<any>;
     title: string;
     description: string;
     url: string;
