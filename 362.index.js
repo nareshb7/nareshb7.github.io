@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[362],{3362:(o,e,s)=>{s.r(e),s.d(e,{default:()=>p});const p=s.p+"images/socio-media-home.jpg"}}]);

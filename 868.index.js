@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[868],{3868:(e,s,t)=>{t.r(s),t.d(s,{default:()=>o});const o=t.p+"images/task-tracker.jpg"}}]);
