@@ -1,1 +1,1 @@
-"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[929],{9929:(e,o,p)=>{p.r(o),p.d(o,{default:()=>s});const s=p.p+"images/react-beginner-projects.webp"}}]);
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[929],{9929:(e,s,t)=>{t.r(s),t.d(s,{default:()=>o});const o="assets/react-beginner-projects.webp"}}]);

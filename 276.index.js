@@ -1,1 +1,1 @@
-"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[276],{4276:(e,p,o)=>{o.r(p),o.d(p,{default:()=>s});const s=o.p+"images/simple-chat-app-welcome.webp"}}]);
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[276],{4276:(e,s,p)=>{p.r(s),p.d(s,{default:()=>o});const o="assets/simple-chat-app-welcome.webp"}}]);

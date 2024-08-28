@@ -1,1 +1,1 @@
-"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[880],{880:(e,s,t)=>{t.r(s),t.d(s,{default:()=>o});const o=t.p+"images/task-tracker.webp"}}]);
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[880],{880:(s,e,t)=>{t.r(e),t.d(e,{default:()=>o});const o="assets/task-tracker.webp"}}]);
