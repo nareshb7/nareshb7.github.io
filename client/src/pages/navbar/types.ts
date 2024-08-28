@@ -9,4 +9,5 @@ export enum Pages {
   }
   export interface NavListProps {
     dark: string;
+    isToggle: boolean;
   }  

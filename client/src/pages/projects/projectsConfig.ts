@@ -3,6 +3,7 @@ import taskTracker from "assets/task-tracker.jpg"
 import socioMedia from "assets/socio-media-home.jpg"
 import guessTheNumber from "assets/guess-the-number.jpg"
 import reactBeginnerProjects from "assets/react-beginner-projects.jpg"
+import instaShare from "assets/insta-share.jpg"
 import { ProjectData } from './types';
 
 export const projectConfig: ProjectData[] = [
@@ -43,10 +44,10 @@ export const projectConfig: ProjectData[] = [
   },
   {
     id: 6,
-    image: socioMedia,
+    image: instaShare,
     title: 'Insta Share',
     description: 'Its similar like a chat application, but works on basis of room id\'s, no authentication needed, even u can share files upto 3mb',
-    url: 'https://socio-media-app.netlify.app',
+    url: 'https://instant-file-share.netlify.app/',
   },
   {
     id: 7,

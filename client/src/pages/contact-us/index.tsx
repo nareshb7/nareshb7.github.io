@@ -6,49 +6,12 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import SectionHeader from 'common/SectionHeader';
 import { Pages } from 'pages/navbar/types';
-import { FormData } from './types';
-import { sendData } from './api';
 import { Link } from '@mui/material';
+import { useContactus } from './hook';
 
-const INITIAL_FORM_DATA = {
-  name: '',
-  email: '',
-  subject: '',
-  message: '',
-};
-const INITIAL_MESSAGE = {
-  type: '',
-  content: '',
-};
-
-function ContactUs() {
-  const [formData, setFormData] = useState<FormData>(INITIAL_FORM_DATA);
-  const [isLoading, setIsLoading] = useState(false);
-  const [message, setMessage] = useState(INITIAL_MESSAGE);
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    setMessage(INITIAL_MESSAGE);
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-  const handleSend = () => {
-    setIsLoading(true);
-    sendData(formData)
-      .then((dt) => {
-        setFormData(INITIAL_FORM_DATA);
-        setMessage({ type: 'SUCCESS', content: 'Mail sent Successfully, You will receive a confirmation mail from My team..!' });
-      })
-      .catch((_) => {
-        setMessage({
-          type: 'ERROR',
-          content: 'Error Occured, while sending  mail please try again...',
-        });
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
-  };
+const ContactUs = () => {
+  const { formData, message, isLoading, handleChange, handleSend } =
+    useContactus();
 
   return (
     <Box sx={{ padding: 4, maxWidth: 800, margin: 'auto' }} id={Pages.CONTACT}>
@@ -157,13 +120,14 @@ function ContactUs() {
             {isLoading ? 'Sending...' : 'Send Message'}
           </Button>
         </Grid>
-       
       </Grid>
 
       <Box sx={{ marginTop: 4, textAlign: 'center' }}>
         <Typography variant="body1">
           Alternatively, you can email us directly at:{' '}
-          <Link href="mailto:nareshbjava7@gmail.com">nareshbjava7@gmail.com</Link>
+          <Link href="mailto:nareshbjava7@gmail.com">
+            nareshbjava7@gmail.com
+          </Link>
         </Typography>
       </Box>
     </Box>

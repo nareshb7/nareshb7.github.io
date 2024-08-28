@@ -52,7 +52,7 @@ const Navbar = () => {
       </FlexBetween>
       {isNonMobileScreens ? (
         <FlexBetween gap="1rem">
-          <NavList dark={dark} />
+          <NavList dark={dark} isToggle={false} />
         </FlexBetween>
       ) : (
         <IconButton
@@ -91,7 +91,7 @@ const Navbar = () => {
             alignItems="center"
             gap="1rem"
           >
-            <NavList dark={dark} />
+            <NavList dark={dark} isToggle={true} />
           </FlexBetween>
         </Box>
       )}

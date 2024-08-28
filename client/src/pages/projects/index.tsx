@@ -8,7 +8,7 @@ const Projects: React.FC = () => {
   return (
     <Box id="projects">
       <SectionHeader name="Projects"/>
-      <Box width={"90%"} margin={"auto"}>
+      <Box width={"90%"} margin={"auto"} textAlign={"center"}>
       {
         projectConfig.map(project => {
           return <ProjectCard key={project.id} {...project}/>

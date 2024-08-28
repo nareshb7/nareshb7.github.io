@@ -18,7 +18,7 @@ export const navList = [
   { id: 6, label: 'Blog', url: Pages.BLOG },
 ];
 
-export const NavList: React.FC<NavListProps> = ({ dark }) => {
+export const NavList: React.FC<NavListProps> = ({ dark , isToggle}) => {
   const { setMode, mode } = useAuthContext();
   const handleLinkClick = (url: string) => {
     const el = document.getElementById(url);
@@ -28,7 +28,7 @@ export const NavList: React.FC<NavListProps> = ({ dark }) => {
   };
   return (
     <>
-    <List sx={{display:"flex"}}>
+    <List sx={{display:"flex",flexDirection: isToggle ? "column": "" }}>
       {navList.map((section) => (
         <ListItem
           sx={{ cursor: 'pointer' }}
