@@ -116,6 +116,7 @@ const ContactUs = () => {
             color="primary"
             type="submit"
             onClick={handleSend}
+            disabled={isLoading}
           >
             {isLoading ? 'Sending...' : 'Send Message'}
           </Button>
