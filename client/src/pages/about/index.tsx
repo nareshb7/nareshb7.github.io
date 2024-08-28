@@ -17,6 +17,7 @@ const About: React.FC = () => {
         <Avatar
           src={developerImage}
           sx={{ width: 120, height: 120, margin: 'auto' }}
+          alt='developer'
         />
         <Typography variant="h4" component="h1" sx={{ marginTop: 2 }}>
           Naresh Baleboina

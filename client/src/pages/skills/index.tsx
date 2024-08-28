@@ -31,7 +31,7 @@ const Skills: React.FC = () => {
           </Typography>
           {skillSet[category as keyof SkillSet].map((skill) => (
             <Box key={skill.id} sx={{ mb: 2 }}>
-              <Typography variant="h6" gutterBottom>
+              <Typography variant="h5" gutterBottom>
                 {skill.name}
               </Typography>
               <LinearProgress variant="determinate" value={skill.progress} aria-label={skill.name}/>

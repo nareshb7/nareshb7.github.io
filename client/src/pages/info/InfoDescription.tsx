@@ -15,13 +15,13 @@ const InfoDescription: React.FC = () => {
   );
   return (
     <Box sx={{ textAlign: 'center', fontFamily: 'cursive' }}>
-      <Typography variant="h1" sx={{ margin: '5px' }}>
+      <Typography variant="h2" sx={{ margin: '5px' }}>
         {name}
       </Typography>
       <Typography variant="h3" sx={{ margin: '5px' }}>
         {role}
       </Typography>
-      <Typography variant="h5" sx={{ margin: '5px', lineClamp: '3px' }}>
+      <Typography variant="h4" sx={{ margin: '5px', lineClamp: '3px' }}>
         {description}
       </Typography>
       <Button sx={{ fontSize: '25px', marginTop: '20px' }}>
