@@ -28,7 +28,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       sx={{
         width: 345,
         margin: '20px',
-        border: "1px solid red",
         backgroundColor: theme.palette.background.paper,
         boxShadow: theme.shadows[5],
         transition: 'all 0.3s',
