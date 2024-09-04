@@ -47,6 +47,6 @@ export const projectConfig: ProjectData[] = [
     title: 'Insta Share',
     description: 'Its similar like a chat application, but works on basis of room id\'s, no authentication needed, even u can share files upto 3mb',
     url: 'https://instant-file-share.netlify.app/',
-    techStack: ["React", "Node JS", "Express JS", "Mongo DB", "Socket.io","TypeScript"]
+    techStack: ["React", "Node JS", "Express JS", "Mongo DB", "Socket.io","TypeScript", "SASS"]
   },
 ];

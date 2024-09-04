@@ -59,17 +59,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </Typography>
         </Box>
       </CardContent>
-
       <CardActions style={{ alignSelf: 'end' }}>
         <Typography>
-          Click here for{' '}
+          Click here to visit{' '}
           <Link href={url} target="_blank" rel="noopener noreferrer">
             {title}
-          </Link>
+          </Link>{' '}
+          App
         </Typography>
-        {/* <Button size="small" color="primary" href={url} target="_blank">
-          <Typography variant="inherit">{title} </Typography>
-        </Button> */}
       </CardActions>
     </Card>
   );
