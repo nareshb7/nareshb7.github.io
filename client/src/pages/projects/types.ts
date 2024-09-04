@@ -3,6 +3,7 @@ export interface ProjectCardProps {
   title: string;
   description: string;
   url: string;
+  techStack: string[]
 }
 export interface ProjectData {
     id: number;
@@ -10,4 +11,5 @@ export interface ProjectData {
     title: string;
     description: string;
     url: string;
+    techStack: string[]
 }
