@@ -1,6 +1,10 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const webpack = require("webpack")
+const { execSync} = require("child_process")
+
+const deployedDate = execSync('powershell -command "Get-Date -Format yyyy-MM-dd:hh:mm:ss"').toString().trim()
 
 module.exports = {
   entry: "./src/index.tsx",
@@ -96,6 +100,9 @@ module.exports = {
         // Add other files or directories to copy if needed
       ],
     }),
+    new webpack.DefinePlugin({
+      'process.env.REACT_APP_DEPLOY_DATE': JSON.stringify(deployedDate),
+    })
   ],
   devServer: {
     port: 4040,
