@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[746],{4746:(e,p,o)=>{o.r(p),o.d(p,{default:()=>s});const s=o.p+"images/simple-chat-app-welcome.jpg"}}]);

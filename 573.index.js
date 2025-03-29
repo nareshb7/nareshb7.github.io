@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[573],{3573:(s,e,o)=>{o.r(e),o.d(e,{default:()=>p});const p=o.p+"images/insta-share.jpg"}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[457],{7457:(e,s,o)=>{o.r(s),o.d(s,{default:()=>p});const p=o.p+"images/guess-the-number.jpg"}}]);

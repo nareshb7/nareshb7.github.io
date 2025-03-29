@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[780],{3780:(s,e,o)=>{o.r(e),o.d(e,{default:()=>t});const t="assets/LLD-projects.png"}}]);
