@@ -48,5 +48,12 @@ export const projectConfig: ProjectData[] = [
     description: 'Its similar like a chat application, but works on basis of room id\'s, no authentication needed, even u can share files upto 3mb',
     url: 'https://instant-file-share.netlify.app/',
     techStack: ["React", "Node JS", "Express JS", "Mongo DB", "Socket.io","TypeScript", "SASS"]
+  },{
+    id: 7,
+    image: () => import('assets/LLD-projects.png'),
+    title: 'LLD Projects',
+    description: 'It contains multiple LLD projects for beginners practice like Toast notification, Parking Lot e.t.c',
+    url: 'https://nareshb7.github.io/LLD-Projects/',
+    techStack: ["React", "TypeScript", "Bootstrap"]
   },
 ];
